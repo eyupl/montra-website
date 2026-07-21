@@ -9,7 +9,7 @@
   <meta
     id="meta-description"
     name="description"
-    content="Montra; yazılım geliştirme, veritabanı yönetimi, veri taşıma, ETL, network, donanım ve IT entegrasyon hizmetleri sunar."
+    content="Montra; yazılım geliştirme, veritabanı yönetimi, veri taşıma, ETL, network, donanım, yenilikçi cihaz üretimi ve iş çözümleri sunar."
   />
 
   <style>
@@ -522,14 +522,8 @@
         padding: 95px 0;
       }
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .cards,
+      .stats-grid,
       .contact-people {
         grid-template-columns: 1fr;
       }
@@ -548,7 +542,6 @@
 </head>
 
 <body>
-
   <header>
     <div class="container">
       <nav>
@@ -563,23 +556,8 @@
           </div>
 
           <div class="language-switcher">
-            <button
-              type="button"
-              id="tr-button"
-              class="language-button active"
-              onclick="changeLanguage('tr')"
-            >
-              TR
-            </button>
-
-            <button
-              type="button"
-              id="en-button"
-              class="language-button"
-              onclick="changeLanguage('en')"
-            >
-              EN
-            </button>
+            <button type="button" id="tr-button" class="language-button active" onclick="changeLanguage('tr')">TR</button>
+            <button type="button" id="en-button" class="language-button" onclick="changeLanguage('en')">EN</button>
           </div>
         </div>
       </nav>
@@ -587,19 +565,14 @@
   </header>
 
   <main>
-
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <div class="eyebrow" data-i18n="heroEyebrow">
-            Teknoloji • Veri • Yazılım
-          </div>
+          <div class="eyebrow" data-i18n="heroEyebrow">Teknoloji • Veri • Yazılım</div>
 
           <h1>
             <span data-i18n="heroTitle">Teknolojiyi</span>
-            <span class="gradient-text" data-i18n="heroTitleHighlight">
-              değere dönüştürüyoruz.
-            </span>
+            <span class="gradient-text" data-i18n="heroTitleHighlight">değere dönüştürüyoruz.</span>
           </h1>
 
           <p data-i18n="heroDescription">
@@ -609,21 +582,8 @@
           </p>
 
           <div class="buttons">
-            <a
-              href="#hizmetler"
-              class="btn btn-primary"
-              data-i18n="heroServicesButton"
-            >
-              Hizmetlerimizi İncele
-            </a>
-
-            <a
-              href="#iletisim"
-              class="btn btn-secondary"
-              data-i18n="heroContactButton"
-            >
-              Bizimle İletişime Geç
-            </a>
+            <a href="#hizmetler" class="btn btn-primary" data-i18n="heroServicesButton">Hizmetlerimizi İncele</a>
+            <a href="#iletisim" class="btn btn-secondary" data-i18n="heroContactButton">Bizimle İletişime Geç</a>
           </div>
         </div>
       </div>
@@ -633,11 +593,7 @@
       <div class="container">
         <div class="section-title">
           <span data-i18n="servicesLabel">Hizmetlerimiz</span>
-
-          <h2 data-i18n="servicesTitle">
-            İşletmenize özel teknoloji çözümleri
-          </h2>
-
+          <h2 data-i18n="servicesTitle">İşletmenize özel teknoloji çözümleri</h2>
           <p data-i18n="servicesDescription">
             Altyapıdan yazılıma, veritabanından veri bilimine kadar
             ihtiyaç duyduğunuz teknoloji hizmetlerini tek noktadan sunuyoruz.
@@ -645,61 +601,53 @@
         </div>
 
         <div class="cards">
-
           <div class="card">
             <div class="card-icon">💻</div>
             <h3 data-i18n="serviceSoftwareTitle">Yazılım Geliştirme</h3>
-            <p data-i18n="serviceSoftwareDescription">
-              İşletmenize özel, güvenli ve ölçeklenebilir web ve mobil
-              uygulamalar geliştiriyoruz.
-            </p>
+            <p data-i18n="serviceSoftwareDescription">İşletmenize özel, güvenli ve ölçeklenebilir web ve mobil uygulamalar geliştiriyoruz.</p>
           </div>
 
           <div class="card">
             <div class="card-icon">🗄️</div>
             <h3 data-i18n="serviceDatabaseTitle">Veritabanı Yönetimi</h3>
-            <p data-i18n="serviceDatabaseDescription">
-              PostgreSQL, SQL Server, MongoDB, MySQL ve diğer platformlarda
-              kurulum, bakım, izleme ve performans hizmetleri sunuyoruz.
-            </p>
+            <p data-i18n="serviceDatabaseDescription">PostgreSQL, SQL Server, MongoDB, MySQL ve diğer platformlarda kurulum, bakım, izleme ve performans hizmetleri sunuyoruz.</p>
           </div>
 
           <div class="card">
             <div class="card-icon">🔄</div>
             <h3 data-i18n="serviceMigrationTitle">Veritabanı Migration</h3>
-            <p data-i18n="serviceMigrationDescription">
-              Sistemlerinizi minimum kesinti ve veri kaybı riskiyle
-              güvenli biçimde yeni platformlara taşıyoruz.
-            </p>
+            <p data-i18n="serviceMigrationDescription">Sistemlerinizi minimum kesinti ve veri kaybı riskiyle güvenli biçimde yeni platformlara taşıyoruz.</p>
           </div>
 
           <div class="card">
             <div class="card-icon">📊</div>
             <h3 data-i18n="serviceEtlTitle">ETL ve Veri Entegrasyonu</h3>
-            <p data-i18n="serviceEtlDescription">
-              Farklı sistemlerdeki verileri topluyor, dönüştürüyor
-              ve merkezi yapılarda kullanılabilir hale getiriyoruz.
-            </p>
+            <p data-i18n="serviceEtlDescription">Farklı sistemlerdeki verileri topluyor, dönüştürüyor ve merkezi yapılarda kullanılabilir hale getiriyoruz.</p>
           </div>
 
           <div class="card">
             <div class="card-icon">🌐</div>
             <h3 data-i18n="serviceNetworkTitle">Network ve Altyapı</h3>
-            <p data-i18n="serviceNetworkDescription">
-              Güvenli, yüksek erişilebilir ve yönetilebilir network
-              altyapıları tasarlıyor ve devreye alıyoruz.
-            </p>
+            <p data-i18n="serviceNetworkDescription">Güvenli, yüksek erişilebilir ve yönetilebilir network altyapıları tasarlıyor ve devreye alıyoruz.</p>
           </div>
 
           <div class="card">
             <div class="card-icon">🧠</div>
             <h3 data-i18n="serviceDataScienceTitle">Veri Bilimi</h3>
-            <p data-i18n="serviceDataScienceDescription">
-              Verilerinizi anlamlı içgörülere dönüştürerek
-              karar alma süreçlerinizi güçlendiriyoruz.
-            </p>
+            <p data-i18n="serviceDataScienceDescription">Verilerinizi anlamlı içgörülere dönüştürerek karar alma süreçlerinizi güçlendiriyoruz.</p>
           </div>
 
+          <div class="card">
+            <div class="card-icon">⚙️</div>
+            <h3 data-i18n="serviceNovaTitle">Montra Nova</h3>
+            <p data-i18n="serviceNovaDescription">Yenilikçi cihazlar tasarlıyor, geliştiriyor ve işletmelerin ihtiyaçlarına uygun teknoloji ürünleri üretiyoruz.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🔗</div>
+            <h3 data-i18n="serviceBusinessTitle">Business Solutions</h3>
+            <p data-i18n="serviceBusinessDescription">İşletmeleriniz için süreçleri hızlandıran otomasyon, entegrasyon ve özel yazılım çözümleri geliştiriyoruz.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -707,17 +655,11 @@
     <section id="hakkimizda">
       <div class="container">
         <div class="about-grid">
-
-          <div class="about-box">
-            MONTRA
-          </div>
+          <div class="about-box">MONTRA</div>
 
           <div class="about-content">
             <div class="eyebrow" data-i18n="aboutLabel">Hakkımızda</div>
-
-            <h2 data-i18n="aboutTitle">
-              Teknoloji ihtiyaçlarınız için güvenilir iş ortağı
-            </h2>
+            <h2 data-i18n="aboutTitle">Teknoloji ihtiyaçlarınız için güvenilir iş ortağı</h2>
 
             <p data-i18n="aboutParagraphOne">
               Montra, işletmelerin teknoloji altyapılarını daha güvenli,
@@ -730,36 +672,12 @@
             </p>
 
             <div class="check-list">
-              <div class="check-item">
-                <div class="check">✓</div>
-                <span data-i18n="aboutCheckOne">
-                  İhtiyaca özel çözüm tasarımı
-                </span>
-              </div>
-
-              <div class="check-item">
-                <div class="check">✓</div>
-                <span data-i18n="aboutCheckTwo">
-                  Güvenlik ve yüksek erişilebilirlik
-                </span>
-              </div>
-
-              <div class="check-item">
-                <div class="check">✓</div>
-                <span data-i18n="aboutCheckThree">
-                  Ölçeklenebilir ve sürdürülebilir mimari
-                </span>
-              </div>
-
-              <div class="check-item">
-                <div class="check">✓</div>
-                <span data-i18n="aboutCheckFour">
-                  Deneyimli teknik ekip
-                </span>
-              </div>
+              <div class="check-item"><div class="check">✓</div><span data-i18n="aboutCheckOne">İhtiyaca özel çözüm tasarımı</span></div>
+              <div class="check-item"><div class="check">✓</div><span data-i18n="aboutCheckTwo">Güvenlik ve yüksek erişilebilirlik</span></div>
+              <div class="check-item"><div class="check">✓</div><span data-i18n="aboutCheckThree">Ölçeklenebilir ve sürdürülebilir mimari</span></div>
+              <div class="check-item"><div class="check">✓</div><span data-i18n="aboutCheckFour">Deneyimli teknik ekip</span></div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -768,40 +686,14 @@
       <div class="container">
         <div class="section-title">
           <span data-i18n="whyLabel">Neden Montra?</span>
-
-          <h2 data-i18n="whyTitle">
-            Teknolojide güçlü ve sürdürülebilir yaklaşım
-          </h2>
+          <h2 data-i18n="whyTitle">Teknolojide güçlü ve sürdürülebilir yaklaşım</h2>
         </div>
 
         <div class="stats-grid">
-          <div class="stat">
-            <strong>7/24</strong>
-            <span data-i18n="statSupport">
-              İzleme ve destek yaklaşımı
-            </span>
-          </div>
-
-          <div class="stat">
-            <strong data-i18n="statEndToEndTitle">Uçtan Uca</strong>
-            <span data-i18n="statEndToEndDescription">
-              Teknoloji hizmetleri
-            </span>
-          </div>
-
-          <div class="stat">
-            <strong data-i18n="statSecureTitle">Güvenli</strong>
-            <span data-i18n="statSecureDescription">
-              Altyapı ve veri yönetimi
-            </span>
-          </div>
-
-          <div class="stat">
-            <strong data-i18n="statFlexibleTitle">Esnek</strong>
-            <span data-i18n="statFlexibleDescription">
-              İhtiyaca özel çözümler
-            </span>
-          </div>
+          <div class="stat"><strong>7/24</strong><span data-i18n="statSupport">İzleme ve destek yaklaşımı</span></div>
+          <div class="stat"><strong data-i18n="statEndToEndTitle">Uçtan Uca</strong><span data-i18n="statEndToEndDescription">Teknoloji hizmetleri</span></div>
+          <div class="stat"><strong data-i18n="statSecureTitle">Güvenli</strong><span data-i18n="statSecureDescription">Altyapı ve veri yönetimi</span></div>
+          <div class="stat"><strong data-i18n="statFlexibleTitle">Esnek</strong><span data-i18n="statFlexibleDescription">İhtiyaca özel çözümler</span></div>
         </div>
       </div>
     </section>
@@ -809,152 +701,83 @@
     <section id="iletisim" class="contact">
       <div class="container">
         <div class="contact-box">
-
-          <h2 data-i18n="contactTitle">
-            Projenizi birlikte hayata geçirelim
-          </h2>
+          <h2 data-i18n="contactTitle">Projenizi birlikte hayata geçirelim</h2>
 
           <p data-i18n="contactDescription">
             Yazılım, veritabanı, veri taşıma, ETL, altyapı veya
             danışmanlık ihtiyaçlarınız için bizimle iletişime geçin.
           </p>
 
-          <a
-            href="mailto:info@montra.com.tr"
-            class="contact-email"
-          >
-            📧 info@montra.com.tr
-          </a>
+          <a href="mailto:info@montra.com.tr" class="contact-email">📧 info@montra.com.tr</a>
 
           <div class="contact-people">
-
             <div class="contact-person">
               <div class="person-icon">👤</div>
-
               <h3>Eyüp Liste</h3>
-
-              <span
-                class="contact-label"
-                data-i18n="phoneLabel"
-              >
-                Telefon
-              </span>
-
-              <a href="tel:+905452120762">
-                +90 545 212 07 62
-              </a>
+              <span class="contact-label" data-i18n="phoneLabel">Telefon</span>
+              <a href="tel:+905452120762">+90 545 212 07 62</a>
             </div>
 
             <div class="contact-person">
               <div class="person-icon">👤</div>
-
               <h3>Alper Atak</h3>
-
-              <span
-                class="contact-label"
-                data-i18n="phoneLabel"
-              >
-                Telefon
-              </span>
-
-              <a href="tel:+905323048784">
-                +90 532 304 87 84
-              </a>
+              <span class="contact-label" data-i18n="phoneLabel">Telefon</span>
+              <a href="tel:+905323048784">+90 532 304 87 84</a>
             </div>
-
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer>
-    <div class="container" data-i18n="footerText">
-      © 2026 Montra Teknoloji. Tüm hakları saklıdır.
-    </div>
+    <div class="container" data-i18n="footerText">© 2026 Montra Teknoloji. Tüm hakları saklıdır.</div>
   </footer>
 
   <script>
     const translations = {
       tr: {
         pageTitle: "Montra Teknoloji",
-
-        metaDescription:
-          "Montra; yazılım geliştirme, veritabanı yönetimi, veri taşıma, ETL, network, donanım ve IT entegrasyon hizmetleri sunar.",
-
+        metaDescription: "Montra; yazılım geliştirme, veritabanı yönetimi, veri taşıma, ETL, network, donanım, yenilikçi cihaz üretimi ve iş çözümleri sunar.",
         navServices: "Hizmetler",
         navAbout: "Hakkımızda",
         navWhy: "Neden Montra?",
         navContact: "İletişim",
-
         heroEyebrow: "Teknoloji • Veri • Yazılım",
         heroTitle: "Teknolojiyi",
         heroTitleHighlight: "değere dönüştürüyoruz.",
-
-        heroDescription:
-          "Montra; yazılım geliştirme, veritabanı yönetimi, veri taşıma, ETL, network, donanım ve IT entegrasyon alanlarında uçtan uca teknoloji çözümleri sunar.",
-
+        heroDescription: "Montra; yazılım geliştirme, veritabanı yönetimi, veri taşıma, ETL, network, donanım ve IT entegrasyon alanlarında uçtan uca teknoloji çözümleri sunar.",
         heroServicesButton: "Hizmetlerimizi İncele",
         heroContactButton: "Bizimle İletişime Geç",
-
         servicesLabel: "Hizmetlerimiz",
         servicesTitle: "İşletmenize özel teknoloji çözümleri",
-
-        servicesDescription:
-          "Altyapıdan yazılıma, veritabanından veri bilimine kadar ihtiyaç duyduğunuz teknoloji hizmetlerini tek noktadan sunuyoruz.",
-
+        servicesDescription: "Altyapıdan yazılıma, veritabanından veri bilimine kadar ihtiyaç duyduğunuz teknoloji hizmetlerini tek noktadan sunuyoruz.",
         serviceSoftwareTitle: "Yazılım Geliştirme",
-
-        serviceSoftwareDescription:
-          "İşletmenize özel, güvenli ve ölçeklenebilir web ve mobil uygulamalar geliştiriyoruz.",
-
+        serviceSoftwareDescription: "İşletmenize özel, güvenli ve ölçeklenebilir web ve mobil uygulamalar geliştiriyoruz.",
         serviceDatabaseTitle: "Veritabanı Yönetimi",
-
-        serviceDatabaseDescription:
-          "PostgreSQL, SQL Server, MongoDB, MySQL ve diğer platformlarda kurulum, bakım, izleme ve performans hizmetleri sunuyoruz.",
-
+        serviceDatabaseDescription: "PostgreSQL, SQL Server, MongoDB, MySQL ve diğer platformlarda kurulum, bakım, izleme ve performans hizmetleri sunuyoruz.",
         serviceMigrationTitle: "Veritabanı Migration",
-
-        serviceMigrationDescription:
-          "Sistemlerinizi minimum kesinti ve veri kaybı riskiyle güvenli biçimde yeni platformlara taşıyoruz.",
-
+        serviceMigrationDescription: "Sistemlerinizi minimum kesinti ve veri kaybı riskiyle güvenli biçimde yeni platformlara taşıyoruz.",
         serviceEtlTitle: "ETL ve Veri Entegrasyonu",
-
-        serviceEtlDescription:
-          "Farklı sistemlerdeki verileri topluyor, dönüştürüyor ve merkezi yapılarda kullanılabilir hale getiriyoruz.",
-
+        serviceEtlDescription: "Farklı sistemlerdeki verileri topluyor, dönüştürüyor ve merkezi yapılarda kullanılabilir hale getiriyoruz.",
         serviceNetworkTitle: "Network ve Altyapı",
-
-        serviceNetworkDescription:
-          "Güvenli, yüksek erişilebilir ve yönetilebilir network altyapıları tasarlıyor ve devreye alıyoruz.",
-
+        serviceNetworkDescription: "Güvenli, yüksek erişilebilir ve yönetilebilir network altyapıları tasarlıyor ve devreye alıyoruz.",
         serviceDataScienceTitle: "Veri Bilimi",
-
-        serviceDataScienceDescription:
-          "Verilerinizi anlamlı içgörülere dönüştürerek karar alma süreçlerinizi güçlendiriyoruz.",
-
+        serviceDataScienceDescription: "Verilerinizi anlamlı içgörülere dönüştürerek karar alma süreçlerinizi güçlendiriyoruz.",
+        serviceNovaTitle: "Montra Nova",
+        serviceNovaDescription: "Yenilikçi cihazlar tasarlıyor, geliştiriyor ve işletmelerin ihtiyaçlarına uygun teknoloji ürünleri üretiyoruz.",
+        serviceBusinessTitle: "Business Solutions",
+        serviceBusinessDescription: "İşletmeleriniz için süreçleri hızlandıran otomasyon, entegrasyon ve özel yazılım çözümleri geliştiriyoruz.",
         aboutLabel: "Hakkımızda",
-
-        aboutTitle:
-          "Teknoloji ihtiyaçlarınız için güvenilir iş ortağı",
-
-        aboutParagraphOne:
-          "Montra, işletmelerin teknoloji altyapılarını daha güvenli, hızlı ve verimli hale getirmek amacıyla kurulmuştur.",
-
-        aboutParagraphTwo:
-          "Projeleri yalnızca tamamlamayı değil, sürdürülebilir, yönetilebilir ve uzun vadeli çözümler üretmeyi hedefliyoruz.",
-
+        aboutTitle: "Teknoloji ihtiyaçlarınız için güvenilir iş ortağı",
+        aboutParagraphOne: "Montra, işletmelerin teknoloji altyapılarını daha güvenli, hızlı ve verimli hale getirmek amacıyla kurulmuştur.",
+        aboutParagraphTwo: "Projeleri yalnızca tamamlamayı değil, sürdürülebilir, yönetilebilir ve uzun vadeli çözümler üretmeyi hedefliyoruz.",
         aboutCheckOne: "İhtiyaca özel çözüm tasarımı",
         aboutCheckTwo: "Güvenlik ve yüksek erişilebilirlik",
         aboutCheckThree: "Ölçeklenebilir ve sürdürülebilir mimari",
         aboutCheckFour: "Deneyimli teknik ekip",
-
         whyLabel: "Neden Montra?",
-
-        whyTitle:
-          "Teknolojide güçlü ve sürdürülebilir yaklaşım",
-
+        whyTitle: "Teknolojide güçlü ve sürdürülebilir yaklaşım",
         statSupport: "İzleme ve destek yaklaşımı",
         statEndToEndTitle: "Uçtan Uca",
         statEndToEndDescription: "Teknoloji hizmetleri",
@@ -962,96 +785,54 @@
         statSecureDescription: "Altyapı ve veri yönetimi",
         statFlexibleTitle: "Esnek",
         statFlexibleDescription: "İhtiyaca özel çözümler",
-
         contactTitle: "Projenizi birlikte hayata geçirelim",
-
-        contactDescription:
-          "Yazılım, veritabanı, veri taşıma, ETL, altyapı veya danışmanlık ihtiyaçlarınız için bizimle iletişime geçin.",
-
+        contactDescription: "Yazılım, veritabanı, veri taşıma, ETL, altyapı veya danışmanlık ihtiyaçlarınız için bizimle iletişime geçin.",
         phoneLabel: "Telefon",
-
-        footerText:
-          "© 2026 Montra Teknoloji. Tüm hakları saklıdır."
+        footerText: "© 2026 Montra Teknoloji. Tüm hakları saklıdır."
       },
 
       en: {
         pageTitle: "Montra Technology",
-
-        metaDescription:
-          "Montra provides software development, database management, database migration, ETL, network, infrastructure and IT integration services.",
-
+        metaDescription: "Montra provides software development, database management, migration, ETL, network, infrastructure, innovative device manufacturing and business solutions.",
         navServices: "Services",
         navAbout: "About Us",
         navWhy: "Why Montra?",
         navContact: "Contact",
-
         heroEyebrow: "Technology • Data • Software",
         heroTitle: "Transforming technology",
         heroTitleHighlight: "into value.",
-
-        heroDescription:
-          "Montra provides end-to-end technology solutions in software development, database management, data migration, ETL, network, hardware and IT integration.",
-
+        heroDescription: "Montra provides end-to-end technology solutions in software development, database management, data migration, ETL, network, hardware and IT integration.",
         heroServicesButton: "Explore Our Services",
         heroContactButton: "Contact Us",
-
         servicesLabel: "Our Services",
         servicesTitle: "Technology solutions tailored to your business",
-
-        servicesDescription:
-          "From infrastructure and software to databases and data science, we provide the technology services your business needs from a single source.",
-
+        servicesDescription: "From infrastructure and software to databases and data science, we provide the technology services your business needs from a single source.",
         serviceSoftwareTitle: "Software Development",
-
-        serviceSoftwareDescription:
-          "We develop secure, scalable and customized web and mobile applications for your business.",
-
+        serviceSoftwareDescription: "We develop secure, scalable and customized web and mobile applications for your business.",
         serviceDatabaseTitle: "Database Management",
-
-        serviceDatabaseDescription:
-          "We provide installation, maintenance, monitoring and performance services for PostgreSQL, SQL Server, MongoDB, MySQL and other platforms.",
-
+        serviceDatabaseDescription: "We provide installation, maintenance, monitoring and performance services for PostgreSQL, SQL Server, MongoDB, MySQL and other platforms.",
         serviceMigrationTitle: "Database Migration",
-
-        serviceMigrationDescription:
-          "We migrate your systems securely to new platforms with minimal downtime and reduced risk of data loss.",
-
+        serviceMigrationDescription: "We migrate your systems securely to new platforms with minimal downtime and reduced risk of data loss.",
         serviceEtlTitle: "ETL and Data Integration",
-
-        serviceEtlDescription:
-          "We collect and transform data from different systems and make it usable within centralized data platforms.",
-
+        serviceEtlDescription: "We collect and transform data from different systems and make it usable within centralized data platforms.",
         serviceNetworkTitle: "Network and Infrastructure",
-
-        serviceNetworkDescription:
-          "We design and implement secure, highly available and manageable network infrastructures.",
-
+        serviceNetworkDescription: "We design and implement secure, highly available and manageable network infrastructures.",
         serviceDataScienceTitle: "Data Science",
-
-        serviceDataScienceDescription:
-          "We transform your data into meaningful insights and strengthen your decision-making processes.",
-
+        serviceDataScienceDescription: "We transform your data into meaningful insights and strengthen your decision-making processes.",
+        serviceNovaTitle: "Montra Nova",
+        serviceNovaDescription: "We design, develop and manufacture innovative technology devices tailored to business needs.",
+        serviceBusinessTitle: "Business Solutions",
+        serviceBusinessDescription: "We develop automation, integration and custom software solutions that improve and accelerate business processes.",
         aboutLabel: "About Us",
-
-        aboutTitle:
-          "A trusted partner for your technology needs",
-
-        aboutParagraphOne:
-          "Montra was established to help businesses make their technology infrastructures more secure, efficient and reliable.",
-
-        aboutParagraphTwo:
-          "Our goal is not only to complete projects, but also to deliver sustainable, manageable and long-term solutions.",
-
+        aboutTitle: "A trusted partner for your technology needs",
+        aboutParagraphOne: "Montra was established to help businesses make their technology infrastructures more secure, efficient and reliable.",
+        aboutParagraphTwo: "Our goal is not only to complete projects, but also to deliver sustainable, manageable and long-term solutions.",
         aboutCheckOne: "Customized solution design",
         aboutCheckTwo: "Security and high availability",
         aboutCheckThree: "Scalable and sustainable architecture",
         aboutCheckFour: "Experienced technical team",
-
         whyLabel: "Why Montra?",
-
-        whyTitle:
-          "A strong and sustainable approach to technology",
-
+        whyTitle: "A strong and sustainable approach to technology",
         statSupport: "Monitoring and support approach",
         statEndToEndTitle: "End-to-End",
         statEndToEndDescription: "Technology services",
@@ -1059,97 +840,49 @@
         statSecureDescription: "Infrastructure and data management",
         statFlexibleTitle: "Flexible",
         statFlexibleDescription: "Customized solutions",
-
         contactTitle: "Let us bring your project to life",
-
-        contactDescription:
-          "Contact us for your software, database, migration, ETL, infrastructure and technology consulting needs.",
-
+        contactDescription: "Contact us for your software, database, migration, ETL, infrastructure and technology consulting needs.",
         phoneLabel: "Phone",
-
-        footerText:
-          "© 2026 Montra Technology. All rights reserved."
+        footerText: "© 2026 Montra Technology. All rights reserved."
       }
     };
 
     function changeLanguage(language) {
-      const selectedLanguage =
-        translations[language] ? language : "tr";
+      const selectedLanguage = translations[language] ? language : "tr";
 
       document.documentElement.lang = selectedLanguage;
-      document.title =
-        translations[selectedLanguage].pageTitle;
+      document.title = translations[selectedLanguage].pageTitle;
 
-      const metaDescription =
-        document.getElementById("meta-description");
+      const metaDescription = document.getElementById("meta-description");
+      metaDescription.setAttribute("content", translations[selectedLanguage].metaDescription);
 
-      metaDescription.setAttribute(
-        "content",
-        translations[selectedLanguage].metaDescription
-      );
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const translationKey = element.getAttribute("data-i18n");
+        if (translations[selectedLanguage][translationKey]) {
+          element.textContent = translations[selectedLanguage][translationKey];
+        }
+      });
 
-      document
-        .querySelectorAll("[data-i18n]")
-        .forEach((element) => {
-          const translationKey =
-            element.getAttribute("data-i18n");
+      document.getElementById("tr-button").classList.toggle("active", selectedLanguage === "tr");
+      document.getElementById("en-button").classList.toggle("active", selectedLanguage === "en");
 
-          if (
-            translations[selectedLanguage][translationKey]
-          ) {
-            element.textContent =
-              translations[selectedLanguage][translationKey];
-          }
-        });
-
-      document
-        .getElementById("tr-button")
-        .classList.toggle(
-          "active",
-          selectedLanguage === "tr"
-        );
-
-      document
-        .getElementById("en-button")
-        .classList.toggle(
-          "active",
-          selectedLanguage === "en"
-        );
-
-      localStorage.setItem(
-        "montraLanguage",
-        selectedLanguage
-      );
+      localStorage.setItem("montraLanguage", selectedLanguage);
     }
 
     function getInitialLanguage() {
-      const savedLanguage =
-        localStorage.getItem("montraLanguage");
+      const savedLanguage = localStorage.getItem("montraLanguage");
 
-      if (
-        savedLanguage === "tr" ||
-        savedLanguage === "en"
-      ) {
+      if (savedLanguage === "tr" || savedLanguage === "en") {
         return savedLanguage;
       }
 
-      const browserLanguage =
-        navigator.language
-          ? navigator.language.toLowerCase()
-          : "tr";
-
-      return browserLanguage.startsWith("en")
-        ? "en"
-        : "tr";
+      const browserLanguage = navigator.language ? navigator.language.toLowerCase() : "tr";
+      return browserLanguage.startsWith("en") ? "en" : "tr";
     }
 
-    document.addEventListener(
-      "DOMContentLoaded",
-      () => {
-        changeLanguage(getInitialLanguage());
-      }
-    );
+    document.addEventListener("DOMContentLoaded", () => {
+      changeLanguage(getInitialLanguage());
+    });
   </script>
-
 </body>
 </html>
