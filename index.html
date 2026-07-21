@@ -7,6 +7,7 @@
   <title>Montra Teknoloji</title>
 
   <meta
+    id="meta-description"
     name="description"
     content="Montra; yazılım geliştirme, veritabanı yönetimi, veri taşıma, ETL, network, donanım ve IT entegrasyon hizmetleri sunar."
   />
@@ -29,6 +30,10 @@
     a {
       text-decoration: none;
       color: inherit;
+    }
+
+    button {
+      font-family: inherit;
     }
 
     .container {
@@ -60,9 +65,15 @@
       color: #65d6ff;
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
     .nav-links {
       display: flex;
-      gap: 28px;
+      gap: 26px;
       align-items: center;
     }
 
@@ -74,6 +85,37 @@
 
     .nav-links a:hover {
       color: #65d6ff;
+    }
+
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .language-button {
+      border: none;
+      background: transparent;
+      color: #aebed0;
+      padding: 7px 10px;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .language-button:hover {
+      color: #ffffff;
+    }
+
+    .language-button.active {
+      background: linear-gradient(90deg, #43c6ff, #766dff);
+      color: #06101c;
     }
 
     .hero {
@@ -92,8 +134,8 @@
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
       background-size: 45px 45px;
       pointer-events: none;
     }
@@ -124,6 +166,7 @@
       background: linear-gradient(90deg, #65d6ff, #8b7cff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .hero p {
@@ -158,7 +201,7 @@
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       color: #ffffff;
     }
 
@@ -207,7 +250,7 @@
 
     .card {
       background: linear-gradient(145deg, #101e33, #0c1728);
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 18px;
       padding: 30px;
       transition: 0.3s;
@@ -251,9 +294,9 @@
       min-height: 360px;
       border-radius: 22px;
       background:
-        radial-gradient(circle at center, rgba(101,214,255,0.25), transparent 40%),
+        radial-gradient(circle at center, rgba(101, 214, 255, 0.25), transparent 40%),
         linear-gradient(145deg, #12243d, #08111f);
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -287,10 +330,11 @@
     }
 
     .check {
+      min-width: 26px;
       width: 26px;
       height: 26px;
       border-radius: 50%;
-      background: rgba(101,214,255,0.12);
+      background: rgba(101, 214, 255, 0.12);
       color: #65d6ff;
       display: flex;
       align-items: center;
@@ -311,14 +355,14 @@
     .stat {
       text-align: center;
       padding: 30px 20px;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
       background: #0f1d30;
     }
 
     .stat strong {
       display: block;
-      font-size: 38px;
+      font-size: 32px;
       color: #65d6ff;
       margin-bottom: 6px;
     }
@@ -333,9 +377,9 @@
 
     .contact-box {
       background:
-        linear-gradient(135deg, rgba(66,198,255,0.15), rgba(118,109,255,0.15)),
+        linear-gradient(135deg, rgba(66, 198, 255, 0.15), rgba(118, 109, 255, 0.15)),
         #0f1d30;
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 24px;
       padding: 55px 25px;
     }
@@ -345,20 +389,101 @@
       margin-bottom: 16px;
     }
 
-    .contact-box p {
+    .contact-box > p {
       color: #abc0d3;
-      margin-bottom: 28px;
+      margin-bottom: 35px;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 35px;
+      padding: 14px 22px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #43c6ff, #766dff);
+      color: #06101c;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .contact-email:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(80, 180, 255, 0.25);
+    }
+
+    .contact-people {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .contact-person {
+      background: rgba(8, 17, 31, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 28px 22px;
+      transition: 0.3s;
+    }
+
+    .contact-person:hover {
+      transform: translateY(-5px);
+      border-color: rgba(101, 214, 255, 0.5);
+    }
+
+    .person-icon {
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(101, 214, 255, 0.12);
+      font-size: 25px;
+    }
+
+    .contact-person h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .contact-person .contact-label {
+      display: block;
+      color: #8fa5bb;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .contact-person a {
+      color: #65d6ff;
+      font-size: 17px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .contact-person a:hover {
+      color: #ffffff;
     }
 
     footer {
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       padding: 28px 0;
       color: #8da0b5;
       text-align: center;
       font-size: 14px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
+      .nav-links {
+        display: none;
+      }
+
       .cards {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -377,8 +502,16 @@
         min-height: 68px;
       }
 
-      .nav-links {
-        display: none;
+      .logo {
+        font-size: 24px;
+      }
+
+      .nav-right {
+        gap: 10px;
+      }
+
+      .language-button {
+        padding: 6px 8px;
       }
 
       .hero {
@@ -397,11 +530,16 @@
         grid-template-columns: 1fr;
       }
 
+      .contact-people {
+        grid-template-columns: 1fr;
+      }
+
       .about-box {
         min-height: 250px;
         font-size: 42px;
       }
 
+      .about-content h2,
       .contact-box h2 {
         font-size: 32px;
       }
@@ -416,11 +554,33 @@
       <nav>
         <a href="#" class="logo">MONTRA</a>
 
-        <div class="nav-links">
-          <a href="#hizmetler">Hizmetler</a>
-          <a href="#hakkimizda">Hakkımızda</a>
-          <a href="#neden-montra">Neden Montra?</a>
-          <a href="#iletisim">İletişim</a>
+        <div class="nav-right">
+          <div class="nav-links">
+            <a href="#hizmetler" data-i18n="navServices">Hizmetler</a>
+            <a href="#hakkimizda" data-i18n="navAbout">Hakkımızda</a>
+            <a href="#neden-montra" data-i18n="navWhy">Neden Montra?</a>
+            <a href="#iletisim" data-i18n="navContact">İletişim</a>
+          </div>
+
+          <div class="language-switcher">
+            <button
+              type="button"
+              id="tr-button"
+              class="language-button active"
+              onclick="changeLanguage('tr')"
+            >
+              TR
+            </button>
+
+            <button
+              type="button"
+              id="en-button"
+              class="language-button"
+              onclick="changeLanguage('en')"
+            >
+              EN
+            </button>
+          </div>
         </div>
       </nav>
     </div>
@@ -431,22 +591,39 @@
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <div class="eyebrow">Teknoloji • Veri • Yazılım</div>
+          <div class="eyebrow" data-i18n="heroEyebrow">
+            Teknoloji • Veri • Yazılım
+          </div>
 
           <h1>
-            Teknolojiyi
-            <span class="gradient-text">değere dönüştürüyoruz.</span>
+            <span data-i18n="heroTitle">Teknolojiyi</span>
+            <span class="gradient-text" data-i18n="heroTitleHighlight">
+              değere dönüştürüyoruz.
+            </span>
           </h1>
 
-          <p>
+          <p data-i18n="heroDescription">
             Montra; yazılım geliştirme, veritabanı yönetimi, veri taşıma,
             ETL, network, donanım ve IT entegrasyon alanlarında uçtan uca
             teknoloji çözümleri sunar.
           </p>
 
           <div class="buttons">
-            <a href="#hizmetler" class="btn btn-primary">Hizmetlerimizi İncele</a>
-            <a href="#iletisim" class="btn btn-secondary">Bizimle İletişime Geç</a>
+            <a
+              href="#hizmetler"
+              class="btn btn-primary"
+              data-i18n="heroServicesButton"
+            >
+              Hizmetlerimizi İncele
+            </a>
+
+            <a
+              href="#iletisim"
+              class="btn btn-secondary"
+              data-i18n="heroContactButton"
+            >
+              Bizimle İletişime Geç
+            </a>
           </div>
         </div>
       </div>
@@ -455,9 +632,13 @@
     <section id="hizmetler" class="services">
       <div class="container">
         <div class="section-title">
-          <span>Hizmetlerimiz</span>
-          <h2>İşletmenize özel teknoloji çözümleri</h2>
-          <p>
+          <span data-i18n="servicesLabel">Hizmetlerimiz</span>
+
+          <h2 data-i18n="servicesTitle">
+            İşletmenize özel teknoloji çözümleri
+          </h2>
+
+          <p data-i18n="servicesDescription">
             Altyapıdan yazılıma, veritabanından veri bilimine kadar
             ihtiyaç duyduğunuz teknoloji hizmetlerini tek noktadan sunuyoruz.
           </p>
@@ -467,8 +648,8 @@
 
           <div class="card">
             <div class="card-icon">💻</div>
-            <h3>Yazılım Geliştirme</h3>
-            <p>
+            <h3 data-i18n="serviceSoftwareTitle">Yazılım Geliştirme</h3>
+            <p data-i18n="serviceSoftwareDescription">
               İşletmenize özel, güvenli ve ölçeklenebilir web ve mobil
               uygulamalar geliştiriyoruz.
             </p>
@@ -476,8 +657,8 @@
 
           <div class="card">
             <div class="card-icon">🗄️</div>
-            <h3>Veritabanı Yönetimi</h3>
-            <p>
+            <h3 data-i18n="serviceDatabaseTitle">Veritabanı Yönetimi</h3>
+            <p data-i18n="serviceDatabaseDescription">
               PostgreSQL, SQL Server, MongoDB, MySQL ve diğer platformlarda
               kurulum, bakım, izleme ve performans hizmetleri sunuyoruz.
             </p>
@@ -485,8 +666,8 @@
 
           <div class="card">
             <div class="card-icon">🔄</div>
-            <h3>Veritabanı Migration</h3>
-            <p>
+            <h3 data-i18n="serviceMigrationTitle">Veritabanı Migration</h3>
+            <p data-i18n="serviceMigrationDescription">
               Sistemlerinizi minimum kesinti ve veri kaybı riskiyle
               güvenli biçimde yeni platformlara taşıyoruz.
             </p>
@@ -494,8 +675,8 @@
 
           <div class="card">
             <div class="card-icon">📊</div>
-            <h3>ETL ve Veri Entegrasyonu</h3>
-            <p>
+            <h3 data-i18n="serviceEtlTitle">ETL ve Veri Entegrasyonu</h3>
+            <p data-i18n="serviceEtlDescription">
               Farklı sistemlerdeki verileri topluyor, dönüştürüyor
               ve merkezi yapılarda kullanılabilir hale getiriyoruz.
             </p>
@@ -503,8 +684,8 @@
 
           <div class="card">
             <div class="card-icon">🌐</div>
-            <h3>Network ve Altyapı</h3>
-            <p>
+            <h3 data-i18n="serviceNetworkTitle">Network ve Altyapı</h3>
+            <p data-i18n="serviceNetworkDescription">
               Güvenli, yüksek erişilebilir ve yönetilebilir network
               altyapıları tasarlıyor ve devreye alıyoruz.
             </p>
@@ -512,8 +693,8 @@
 
           <div class="card">
             <div class="card-icon">🧠</div>
-            <h3>Veri Bilimi</h3>
-            <p>
+            <h3 data-i18n="serviceDataScienceTitle">Veri Bilimi</h3>
+            <p data-i18n="serviceDataScienceDescription">
               Verilerinizi anlamlı içgörülere dönüştürerek
               karar alma süreçlerinizi güçlendiriyoruz.
             </p>
@@ -532,16 +713,18 @@
           </div>
 
           <div class="about-content">
-            <div class="eyebrow">Hakkımızda</div>
+            <div class="eyebrow" data-i18n="aboutLabel">Hakkımızda</div>
 
-            <h2>Teknoloji ihtiyaçlarınız için güvenilir iş ortağı</h2>
+            <h2 data-i18n="aboutTitle">
+              Teknoloji ihtiyaçlarınız için güvenilir iş ortağı
+            </h2>
 
-            <p>
+            <p data-i18n="aboutParagraphOne">
               Montra, işletmelerin teknoloji altyapılarını daha güvenli,
               hızlı ve verimli hale getirmek amacıyla kurulmuştur.
             </p>
 
-            <p>
+            <p data-i18n="aboutParagraphTwo">
               Projeleri yalnızca tamamlamayı değil, sürdürülebilir,
               yönetilebilir ve uzun vadeli çözümler üretmeyi hedefliyoruz.
             </p>
@@ -549,22 +732,30 @@
             <div class="check-list">
               <div class="check-item">
                 <div class="check">✓</div>
-                İhtiyaca özel çözüm tasarımı
+                <span data-i18n="aboutCheckOne">
+                  İhtiyaca özel çözüm tasarımı
+                </span>
               </div>
 
               <div class="check-item">
                 <div class="check">✓</div>
-                Güvenlik ve yüksek erişilebilirlik
+                <span data-i18n="aboutCheckTwo">
+                  Güvenlik ve yüksek erişilebilirlik
+                </span>
               </div>
 
               <div class="check-item">
                 <div class="check">✓</div>
-                Ölçeklenebilir ve sürdürülebilir mimari
+                <span data-i18n="aboutCheckThree">
+                  Ölçeklenebilir ve sürdürülebilir mimari
+                </span>
               </div>
 
               <div class="check-item">
                 <div class="check">✓</div>
-                Deneyimli teknik ekip
+                <span data-i18n="aboutCheckFour">
+                  Deneyimli teknik ekip
+                </span>
               </div>
             </div>
           </div>
@@ -576,29 +767,40 @@
     <section id="neden-montra" class="stats">
       <div class="container">
         <div class="section-title">
-          <span>Neden Montra?</span>
-          <h2>Teknolojide güçlü ve sürdürülebilir yaklaşım</h2>
+          <span data-i18n="whyLabel">Neden Montra?</span>
+
+          <h2 data-i18n="whyTitle">
+            Teknolojide güçlü ve sürdürülebilir yaklaşım
+          </h2>
         </div>
 
         <div class="stats-grid">
           <div class="stat">
             <strong>7/24</strong>
-            <span>İzleme ve destek yaklaşımı</span>
+            <span data-i18n="statSupport">
+              İzleme ve destek yaklaşımı
+            </span>
           </div>
 
           <div class="stat">
-            <strong>Uçtan Uca</strong>
-            <span>Teknoloji hizmetleri</span>
+            <strong data-i18n="statEndToEndTitle">Uçtan Uca</strong>
+            <span data-i18n="statEndToEndDescription">
+              Teknoloji hizmetleri
+            </span>
           </div>
 
           <div class="stat">
-            <strong>Güvenli</strong>
-            <span>Altyapı ve veri yönetimi</span>
+            <strong data-i18n="statSecureTitle">Güvenli</strong>
+            <span data-i18n="statSecureDescription">
+              Altyapı ve veri yönetimi
+            </span>
           </div>
 
           <div class="stat">
-            <strong>Esnek</strong>
-            <span>İhtiyaca özel çözümler</span>
+            <strong data-i18n="statFlexibleTitle">Esnek</strong>
+            <span data-i18n="statFlexibleDescription">
+              İhtiyaca özel çözümler
+            </span>
           </div>
         </div>
       </div>
@@ -607,16 +809,60 @@
     <section id="iletisim" class="contact">
       <div class="container">
         <div class="contact-box">
-          <h2>Projenizi birlikte hayata geçirelim</h2>
 
-          <p>
+          <h2 data-i18n="contactTitle">
+            Projenizi birlikte hayata geçirelim
+          </h2>
+
+          <p data-i18n="contactDescription">
             Yazılım, veritabanı, veri taşıma, ETL, altyapı veya
             danışmanlık ihtiyaçlarınız için bizimle iletişime geçin.
           </p>
 
-          <a href="mailto:info@montra.com.tr" class="btn btn-primary">
-            info@montra.com.tr
+          <a
+            href="mailto:info@montra.com.tr"
+            class="contact-email"
+          >
+            📧 info@montra.com.tr
           </a>
+
+          <div class="contact-people">
+
+            <div class="contact-person">
+              <div class="person-icon">👤</div>
+
+              <h3>Eyüp Liste</h3>
+
+              <span
+                class="contact-label"
+                data-i18n="phoneLabel"
+              >
+                Telefon
+              </span>
+
+              <a href="tel:+905452120762">
+                +90 545 212 07 62
+              </a>
+            </div>
+
+            <div class="contact-person">
+              <div class="person-icon">👤</div>
+
+              <h3>Alper Atak</h3>
+
+              <span
+                class="contact-label"
+                data-i18n="phoneLabel"
+              >
+                Telefon
+              </span>
+
+              <a href="tel:+905323048784">
+                +90 532 304 87 84
+              </a>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
@@ -624,10 +870,286 @@
   </main>
 
   <footer>
-    <div class="container">
+    <div class="container" data-i18n="footerText">
       © 2026 Montra Teknoloji. Tüm hakları saklıdır.
     </div>
   </footer>
+
+  <script>
+    const translations = {
+      tr: {
+        pageTitle: "Montra Teknoloji",
+
+        metaDescription:
+          "Montra; yazılım geliştirme, veritabanı yönetimi, veri taşıma, ETL, network, donanım ve IT entegrasyon hizmetleri sunar.",
+
+        navServices: "Hizmetler",
+        navAbout: "Hakkımızda",
+        navWhy: "Neden Montra?",
+        navContact: "İletişim",
+
+        heroEyebrow: "Teknoloji • Veri • Yazılım",
+        heroTitle: "Teknolojiyi",
+        heroTitleHighlight: "değere dönüştürüyoruz.",
+
+        heroDescription:
+          "Montra; yazılım geliştirme, veritabanı yönetimi, veri taşıma, ETL, network, donanım ve IT entegrasyon alanlarında uçtan uca teknoloji çözümleri sunar.",
+
+        heroServicesButton: "Hizmetlerimizi İncele",
+        heroContactButton: "Bizimle İletişime Geç",
+
+        servicesLabel: "Hizmetlerimiz",
+        servicesTitle: "İşletmenize özel teknoloji çözümleri",
+
+        servicesDescription:
+          "Altyapıdan yazılıma, veritabanından veri bilimine kadar ihtiyaç duyduğunuz teknoloji hizmetlerini tek noktadan sunuyoruz.",
+
+        serviceSoftwareTitle: "Yazılım Geliştirme",
+
+        serviceSoftwareDescription:
+          "İşletmenize özel, güvenli ve ölçeklenebilir web ve mobil uygulamalar geliştiriyoruz.",
+
+        serviceDatabaseTitle: "Veritabanı Yönetimi",
+
+        serviceDatabaseDescription:
+          "PostgreSQL, SQL Server, MongoDB, MySQL ve diğer platformlarda kurulum, bakım, izleme ve performans hizmetleri sunuyoruz.",
+
+        serviceMigrationTitle: "Veritabanı Migration",
+
+        serviceMigrationDescription:
+          "Sistemlerinizi minimum kesinti ve veri kaybı riskiyle güvenli biçimde yeni platformlara taşıyoruz.",
+
+        serviceEtlTitle: "ETL ve Veri Entegrasyonu",
+
+        serviceEtlDescription:
+          "Farklı sistemlerdeki verileri topluyor, dönüştürüyor ve merkezi yapılarda kullanılabilir hale getiriyoruz.",
+
+        serviceNetworkTitle: "Network ve Altyapı",
+
+        serviceNetworkDescription:
+          "Güvenli, yüksek erişilebilir ve yönetilebilir network altyapıları tasarlıyor ve devreye alıyoruz.",
+
+        serviceDataScienceTitle: "Veri Bilimi",
+
+        serviceDataScienceDescription:
+          "Verilerinizi anlamlı içgörülere dönüştürerek karar alma süreçlerinizi güçlendiriyoruz.",
+
+        aboutLabel: "Hakkımızda",
+
+        aboutTitle:
+          "Teknoloji ihtiyaçlarınız için güvenilir iş ortağı",
+
+        aboutParagraphOne:
+          "Montra, işletmelerin teknoloji altyapılarını daha güvenli, hızlı ve verimli hale getirmek amacıyla kurulmuştur.",
+
+        aboutParagraphTwo:
+          "Projeleri yalnızca tamamlamayı değil, sürdürülebilir, yönetilebilir ve uzun vadeli çözümler üretmeyi hedefliyoruz.",
+
+        aboutCheckOne: "İhtiyaca özel çözüm tasarımı",
+        aboutCheckTwo: "Güvenlik ve yüksek erişilebilirlik",
+        aboutCheckThree: "Ölçeklenebilir ve sürdürülebilir mimari",
+        aboutCheckFour: "Deneyimli teknik ekip",
+
+        whyLabel: "Neden Montra?",
+
+        whyTitle:
+          "Teknolojide güçlü ve sürdürülebilir yaklaşım",
+
+        statSupport: "İzleme ve destek yaklaşımı",
+        statEndToEndTitle: "Uçtan Uca",
+        statEndToEndDescription: "Teknoloji hizmetleri",
+        statSecureTitle: "Güvenli",
+        statSecureDescription: "Altyapı ve veri yönetimi",
+        statFlexibleTitle: "Esnek",
+        statFlexibleDescription: "İhtiyaca özel çözümler",
+
+        contactTitle: "Projenizi birlikte hayata geçirelim",
+
+        contactDescription:
+          "Yazılım, veritabanı, veri taşıma, ETL, altyapı veya danışmanlık ihtiyaçlarınız için bizimle iletişime geçin.",
+
+        phoneLabel: "Telefon",
+
+        footerText:
+          "© 2026 Montra Teknoloji. Tüm hakları saklıdır."
+      },
+
+      en: {
+        pageTitle: "Montra Technology",
+
+        metaDescription:
+          "Montra provides software development, database management, database migration, ETL, network, infrastructure and IT integration services.",
+
+        navServices: "Services",
+        navAbout: "About Us",
+        navWhy: "Why Montra?",
+        navContact: "Contact",
+
+        heroEyebrow: "Technology • Data • Software",
+        heroTitle: "Transforming technology",
+        heroTitleHighlight: "into value.",
+
+        heroDescription:
+          "Montra provides end-to-end technology solutions in software development, database management, data migration, ETL, network, hardware and IT integration.",
+
+        heroServicesButton: "Explore Our Services",
+        heroContactButton: "Contact Us",
+
+        servicesLabel: "Our Services",
+        servicesTitle: "Technology solutions tailored to your business",
+
+        servicesDescription:
+          "From infrastructure and software to databases and data science, we provide the technology services your business needs from a single source.",
+
+        serviceSoftwareTitle: "Software Development",
+
+        serviceSoftwareDescription:
+          "We develop secure, scalable and customized web and mobile applications for your business.",
+
+        serviceDatabaseTitle: "Database Management",
+
+        serviceDatabaseDescription:
+          "We provide installation, maintenance, monitoring and performance services for PostgreSQL, SQL Server, MongoDB, MySQL and other platforms.",
+
+        serviceMigrationTitle: "Database Migration",
+
+        serviceMigrationDescription:
+          "We migrate your systems securely to new platforms with minimal downtime and reduced risk of data loss.",
+
+        serviceEtlTitle: "ETL and Data Integration",
+
+        serviceEtlDescription:
+          "We collect and transform data from different systems and make it usable within centralized data platforms.",
+
+        serviceNetworkTitle: "Network and Infrastructure",
+
+        serviceNetworkDescription:
+          "We design and implement secure, highly available and manageable network infrastructures.",
+
+        serviceDataScienceTitle: "Data Science",
+
+        serviceDataScienceDescription:
+          "We transform your data into meaningful insights and strengthen your decision-making processes.",
+
+        aboutLabel: "About Us",
+
+        aboutTitle:
+          "A trusted partner for your technology needs",
+
+        aboutParagraphOne:
+          "Montra was established to help businesses make their technology infrastructures more secure, efficient and reliable.",
+
+        aboutParagraphTwo:
+          "Our goal is not only to complete projects, but also to deliver sustainable, manageable and long-term solutions.",
+
+        aboutCheckOne: "Customized solution design",
+        aboutCheckTwo: "Security and high availability",
+        aboutCheckThree: "Scalable and sustainable architecture",
+        aboutCheckFour: "Experienced technical team",
+
+        whyLabel: "Why Montra?",
+
+        whyTitle:
+          "A strong and sustainable approach to technology",
+
+        statSupport: "Monitoring and support approach",
+        statEndToEndTitle: "End-to-End",
+        statEndToEndDescription: "Technology services",
+        statSecureTitle: "Secure",
+        statSecureDescription: "Infrastructure and data management",
+        statFlexibleTitle: "Flexible",
+        statFlexibleDescription: "Customized solutions",
+
+        contactTitle: "Let us bring your project to life",
+
+        contactDescription:
+          "Contact us for your software, database, migration, ETL, infrastructure and technology consulting needs.",
+
+        phoneLabel: "Phone",
+
+        footerText:
+          "© 2026 Montra Technology. All rights reserved."
+      }
+    };
+
+    function changeLanguage(language) {
+      const selectedLanguage =
+        translations[language] ? language : "tr";
+
+      document.documentElement.lang = selectedLanguage;
+      document.title =
+        translations[selectedLanguage].pageTitle;
+
+      const metaDescription =
+        document.getElementById("meta-description");
+
+      metaDescription.setAttribute(
+        "content",
+        translations[selectedLanguage].metaDescription
+      );
+
+      document
+        .querySelectorAll("[data-i18n]")
+        .forEach((element) => {
+          const translationKey =
+            element.getAttribute("data-i18n");
+
+          if (
+            translations[selectedLanguage][translationKey]
+          ) {
+            element.textContent =
+              translations[selectedLanguage][translationKey];
+          }
+        });
+
+      document
+        .getElementById("tr-button")
+        .classList.toggle(
+          "active",
+          selectedLanguage === "tr"
+        );
+
+      document
+        .getElementById("en-button")
+        .classList.toggle(
+          "active",
+          selectedLanguage === "en"
+        );
+
+      localStorage.setItem(
+        "montraLanguage",
+        selectedLanguage
+      );
+    }
+
+    function getInitialLanguage() {
+      const savedLanguage =
+        localStorage.getItem("montraLanguage");
+
+      if (
+        savedLanguage === "tr" ||
+        savedLanguage === "en"
+      ) {
+        return savedLanguage;
+      }
+
+      const browserLanguage =
+        navigator.language
+          ? navigator.language.toLowerCase()
+          : "tr";
+
+      return browserLanguage.startsWith("en")
+        ? "en"
+        : "tr";
+    }
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+        changeLanguage(getInitialLanguage());
+      }
+    );
+  </script>
 
 </body>
 </html>
