@@ -1,1 +1,633 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Montra Teknoloji</title>
+
+  <meta
+    name="description"
+    content="Montra; yazılım geliştirme, veritabanı yönetimi, veri taşıma, ETL, network, donanım ve IT entegrasyon hizmetleri sunar."
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #08111f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 17, 31, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: #65d6ff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #d8e4f2;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #65d6ff;
+    }
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(45, 170, 255, 0.18), transparent 30%),
+        radial-gradient(circle at 15% 70%, rgba(111, 66, 193, 0.16), transparent 30%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 45px 45px;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: #65d6ff;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #65d6ff, #8b7cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: #b8c7d9;
+      font-size: 19px;
+      margin-bottom: 34px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #43c6ff, #766dff);
+      color: #06101c;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(80, 180, 255, 0.25);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #ffffff;
+    }
+
+    .btn-secondary:hover {
+      border-color: #65d6ff;
+      color: #65d6ff;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title span {
+      color: #65d6ff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin-top: 10px;
+    }
+
+    .section-title p {
+      color: #9fb1c5;
+      max-width: 680px;
+      margin: 15px auto 0;
+    }
+
+    .services {
+      background: #0b1627;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #101e33, #0c1728);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 30px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(101, 214, 255, 0.45);
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(101, 214, 255, 0.1);
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #9fb1c5;
+      font-size: 15px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-box {
+      min-height: 360px;
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at center, rgba(101,214,255,0.25), transparent 40%),
+        linear-gradient(145deg, #12243d, #08111f);
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+      font-weight: 800;
+      color: #65d6ff;
+      letter-spacing: 8px;
+    }
+
+    .about-content h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: #a9bacd;
+      margin-bottom: 18px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #d7e2ef;
+    }
+
+    .check {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(101,214,255,0.12);
+      color: #65d6ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .stats {
+      background: #0b1627;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 30px 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      background: #0f1d30;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 38px;
+      color: #65d6ff;
+      margin-bottom: 6px;
+    }
+
+    .stat span {
+      color: #a9bacd;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-box {
+      background:
+        linear-gradient(135deg, rgba(66,198,255,0.15), rgba(118,109,255,0.15)),
+        #0f1d30;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 55px 25px;
+    }
+
+    .contact-box h2 {
+      font-size: 42px;
+      margin-bottom: 16px;
+    }
+
+    .contact-box p {
+      color: #abc0d3;
+      margin-bottom: 28px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 0;
+      color: #8da0b5;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        min-height: 68px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 95px 0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-box {
+        min-height: 250px;
+        font-size: 42px;
+      }
+
+      .contact-box h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">MONTRA</a>
+
+        <div class="nav-links">
+          <a href="#hizmetler">Hizmetler</a>
+          <a href="#hakkimizda">Hakkımızda</a>
+          <a href="#neden-montra">Neden Montra?</a>
+          <a href="#iletisim">İletişim</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Teknoloji • Veri • Yazılım</div>
+
+          <h1>
+            Teknolojiyi
+            <span class="gradient-text">değere dönüştürüyoruz.</span>
+          </h1>
+
+          <p>
+            Montra; yazılım geliştirme, veritabanı yönetimi, veri taşıma,
+            ETL, network, donanım ve IT entegrasyon alanlarında uçtan uca
+            teknoloji çözümleri sunar.
+          </p>
+
+          <div class="buttons">
+            <a href="#hizmetler" class="btn btn-primary">Hizmetlerimizi İncele</a>
+            <a href="#iletisim" class="btn btn-secondary">Bizimle İletişime Geç</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hizmetler" class="services">
+      <div class="container">
+        <div class="section-title">
+          <span>Hizmetlerimiz</span>
+          <h2>İşletmenize özel teknoloji çözümleri</h2>
+          <p>
+            Altyapıdan yazılıma, veritabanından veri bilimine kadar
+            ihtiyaç duyduğunuz teknoloji hizmetlerini tek noktadan sunuyoruz.
+          </p>
+        </div>
+
+        <div class="cards">
+
+          <div class="card">
+            <div class="card-icon">💻</div>
+            <h3>Yazılım Geliştirme</h3>
+            <p>
+              İşletmenize özel, güvenli ve ölçeklenebilir web ve mobil
+              uygulamalar geliştiriyoruz.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🗄️</div>
+            <h3>Veritabanı Yönetimi</h3>
+            <p>
+              PostgreSQL, SQL Server, MongoDB, MySQL ve diğer platformlarda
+              kurulum, bakım, izleme ve performans hizmetleri sunuyoruz.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🔄</div>
+            <h3>Veritabanı Migration</h3>
+            <p>
+              Sistemlerinizi minimum kesinti ve veri kaybı riskiyle
+              güvenli biçimde yeni platformlara taşıyoruz.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">📊</div>
+            <h3>ETL ve Veri Entegrasyonu</h3>
+            <p>
+              Farklı sistemlerdeki verileri topluyor, dönüştürüyor
+              ve merkezi yapılarda kullanılabilir hale getiriyoruz.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🌐</div>
+            <h3>Network ve Altyapı</h3>
+            <p>
+              Güvenli, yüksek erişilebilir ve yönetilebilir network
+              altyapıları tasarlıyor ve devreye alıyoruz.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🧠</div>
+            <h3>Veri Bilimi</h3>
+            <p>
+              Verilerinizi anlamlı içgörülere dönüştürerek
+              karar alma süreçlerinizi güçlendiriyoruz.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="hakkimizda">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-box">
+            MONTRA
+          </div>
+
+          <div class="about-content">
+            <div class="eyebrow">Hakkımızda</div>
+
+            <h2>Teknoloji ihtiyaçlarınız için güvenilir iş ortağı</h2>
+
+            <p>
+              Montra, işletmelerin teknoloji altyapılarını daha güvenli,
+              hızlı ve verimli hale getirmek amacıyla kurulmuştur.
+            </p>
+
+            <p>
+              Projeleri yalnızca tamamlamayı değil, sürdürülebilir,
+              yönetilebilir ve uzun vadeli çözümler üretmeyi hedefliyoruz.
+            </p>
+
+            <div class="check-list">
+              <div class="check-item">
+                <div class="check">✓</div>
+                İhtiyaca özel çözüm tasarımı
+              </div>
+
+              <div class="check-item">
+                <div class="check">✓</div>
+                Güvenlik ve yüksek erişilebilirlik
+              </div>
+
+              <div class="check-item">
+                <div class="check">✓</div>
+                Ölçeklenebilir ve sürdürülebilir mimari
+              </div>
+
+              <div class="check-item">
+                <div class="check">✓</div>
+                Deneyimli teknik ekip
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="neden-montra" class="stats">
+      <div class="container">
+        <div class="section-title">
+          <span>Neden Montra?</span>
+          <h2>Teknolojide güçlü ve sürdürülebilir yaklaşım</h2>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat">
+            <strong>7/24</strong>
+            <span>İzleme ve destek yaklaşımı</span>
+          </div>
+
+          <div class="stat">
+            <strong>Uçtan Uca</strong>
+            <span>Teknoloji hizmetleri</span>
+          </div>
+
+          <div class="stat">
+            <strong>Güvenli</strong>
+            <span>Altyapı ve veri yönetimi</span>
+          </div>
+
+          <div class="stat">
+            <strong>Esnek</strong>
+            <span>İhtiyaca özel çözümler</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="iletisim" class="contact">
+      <div class="container">
+        <div class="contact-box">
+          <h2>Projenizi birlikte hayata geçirelim</h2>
+
+          <p>
+            Yazılım, veritabanı, veri taşıma, ETL, altyapı veya
+            danışmanlık ihtiyaçlarınız için bizimle iletişime geçin.
+          </p>
+
+          <a href="mailto:info@montra.com.tr" class="btn btn-primary">
+            info@montra.com.tr
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Montra Teknoloji. Tüm hakları saklıdır.
+    </div>
+  </footer>
+
+</body>
+</html>
